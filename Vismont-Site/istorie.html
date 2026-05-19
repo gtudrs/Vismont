@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicles of Vismont - History & Legends</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* Specific Styles to Match the Uploaded Design EXACTLY */
+        .history-hero {
+            height: 85vh;
+            background: linear-gradient(rgba(26, 36, 30, 0.4), rgba(44, 57, 48, 0.95)), 
+                        url('https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 0 40px;
+            overflow: hidden;
+        }
+
+        /* Delicate Elegant Side Ornaments from the Image */
+        .hero-ornament {
+            position: absolute;
+            top: 5%;
+            bottom: 5%;
+            width: 40px;
+            opacity: 0.4;
+            pointer-events: none;
+            background-size: contain;
+            background-repeat: repeat-y;
+        }
+        .ornament-left {
+            left: 25px;
+            border-left: 2px dashed var(--accent);
+            padding-left: 10px;
+        }
+        .ornament-right {
+            right: 25px;
+            border-right: 2px dashed var(--accent);
+            padding-right: 10px;
+        }
+
+        .epic-title {
+            font-family: 'Cinzel', serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #F3EFE0;
+            letter-spacing: 3px;
+            line-height: 1.2;
+            text-shadow: 0px 4px 15px rgba(0,0,0,0.6);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .epic-subtitle {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: var(--light);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Micro Inline Carousel Under Main Hero Title */
+        .hero-mini-gallery {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .mini-thumb {
+            width: 110px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid rgba(162, 123, 92, 0.5);
+            transition: 0.3s;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        .mini-thumb:hover {
+            transform: scale(1.08);
+            opacity: 1;
+            border-color: var(--accent);
+        }
+
+        /* Content Blocks split layout like the second section of the image */
+        .history-split {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .serif-heading {
+            font-family: 'Cinzel', serif;
+            font-size: 34px;
+            color: var(--bg-dark);
+            line-height: 1.4;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .history-text {
+            color: #475569;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .history-frame-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 8px solid var(--white);
+            outline: 1px solid rgba(162, 123, 92, 0.3);
+        }
+
+        /* Interactive Timeline Section for extra info density */
+        .timeline-section {
+            background-color: #F4F1EA;
+            padding: 80px 0;
+            border-top: 1px solid #E6DFD3;
+            border-bottom: 1px solid #E6DFD3;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding-left: 30px;
+            border-left: 2px solid var(--accent);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 45px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-dark);
+            border: 2px solid var(--accent);
+        }
+        .timeline-year {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 18px;
+            color: var(--bg-dark);
+            margin-bottom: 8px;
+        }
+
+        /* Media Queries for Perfect Mobile Scalability */
+        @media(max-width: 992px) {
+            .history-split {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .epic-title { font-size: 36px; }
+            .history-frame-img { height: 350px; }
+            .hero-ornament { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-mountain-sun"></i> VISMONT</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="istorie.html" class="active-link">History</a></li>
+                <li><a href="atractii.html">Attractions</a></li>
+                <li><a href="bilete.html">Tickets</a></li>
+                <li><a href="booking.html">Accommodation</a></li>
+            </ul>
+            <div class="nav-extra">
+                <a href="login.html" class="profile-icon"><i class="fa-solid fa-circle-user"></i></a>
+                <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="history-hero">
+        <div class="hero-ornament ornament-left"></div>
+        <div class="hero-ornament ornament-right"></div>
+        
+        <div class="hero-content">
+            <span style="color: var(--accent); font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 4px; font-size: 13px; text-transform: uppercase;">The Ancient Chronicles</span>
+            <h1 class="epic-title">A Fortress of Legends,<br>History & Mystery</h1>
+            <p class="epic-subtitle">Discover how ancient tribes, medieval rulers, and modern visionaries transformed this jagged alpine peak into Vismont—a sovereign sanctuary isolated from time itself.</p>
+            
+            <div class="hero-mini-gallery">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=150&q=80" class="mini-thumb" alt="Cathedral details">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQDTOofMwqWi7JC8h40G5Nd4yZLwUgOIa90lSey8y4M0VwaXw6RBl8jKHTwLOCi" class="mini-thumb" alt="Old castle chamber">
+                <img src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=150&q=80" class="mini-thumb" alt="Alpine pass">
+                <img src="https://images.unsplash.com/photo-1471623432079-b009d30b6729?auto=format&fit=crop&w=150&q=80" class="mini-thumb" alt="Vintage maps">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="history-split">
+            <div>
+                <h2 class="serif-heading">Uncover Hidden Passageways, Immerse Yourself in Stories.</h2>
+                <p class="history-text">The foundation blocks of Vismont Citadel date back to the late 11th century, when a faction of wandering alpine knights sought shelter within these unyielding stone gorges. Shielded by natural rock walls, the fortress grew as a hidden trade checkpoint between massive empires, guarded by deep secrets and impenetrable vertical drops.</p>
+                
+                <div style="margin-top: 30px;">
+                    <h4 style="color: var(--bg-dark); font-family:'Montserrat',sans-serif; font-size:14px; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;"><i class="fa-solid fa-feather-pointed" style="color:var(--accent);"></i> Events & Experiences</h4>
+                    <p class="history-text" style="font-size:14px; color:#64748b;">Whether you are drawn by dynamic living history festivals, medieval archery reenactments, or mysterious nighttime torch tours, Vismont lets you safely step back into ancient timelines.</p>
+                </div>
+
+                <div style="margin-top: 25px;">
+                    <h4 style="color: var(--bg-dark); font-family:'Montserrat',sans-serif; font-size:14px; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;"><i class="fa-solid fa-key" style="color:var(--accent);"></i> Private Tours & Exclusive Access</h4>
+                    <p class="history-text" style="font-size:14px; color:#64748b;">Descend into subterranean chambers and lost library vaults closed to the general public. Discover true forgotten relics alongside our certified royal archivists.</p>
+                </div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1508849789987-4e5333c12b78?auto=format&fit=crop&w=800&q=80" class="history-frame-img" alt="Vismont Castle Keep">
+            </div>
+        </section>
+    </main>
+
+    <section class="timeline-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <h2 class="serif-heading" style="margin-bottom:10px;">The Epochs of Greatness</h2>
+                <div style="width: 50px; height: 2px; background-color: var(--accent); margin: 0 auto;"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1094</div>
+                    <h3 class="timeline-title"><strong>The First Stones Inserted</strong></h3>
+                    <p class="history-text" style="font-size:15px;">Lord Alutus the Brave commands construction of an isolated stone watchtower over the primary canyon network. This single tower layout eventually became the anchor for modern-day Central Vismont.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1422</div>
+                    <h3 class="timeline-title"><strong>The Imperial Siege Defied</strong></h3>
+                    <p class="history-text" style="font-size:15px;">Surrounded by an invading imperial army outnumbering them ten-to-one, Vismont forces survived a gruelling eight-month blockade thanks to a grid of pre-carved subterranean supply networks and hidden alpine fresh springs.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1789</div>
+                    <h3 class="timeline-title"><strong>The Age of Architecture & Art</strong></h3>
+                    <p class="history-text" style="font-size:15px;">The sovereign court converts from defense to decoration. Classic Gothic spires are expanded into majestic Renaissance halls, drawing painters, baroque composers, and master stonecarvers across the continent.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1925</div>
+                    <h3 class="timeline-title"><strong>The Great Mountain Pact</strong></h3>
+                    <p class="history-text" style="font-size:15px;">Vismont declares formal neutral status, converting from an exclusive closed crown property into a public protected mountain park reservation and safe world-heritage cultural asset.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container section">
+        <h2 class="serif-heading" style="text-align: center; margin-bottom: 45px;">Visual Heritage & Remnants</h2>
+        <div class="apartment-grid">
+            <div class="apt-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBQ9IkWHd6A8yIhVo8X9g-DHObEjTV1RmXL8p6tEr2cO0q4tVa5tiKbLrtp3Dc" alt="The Sanctuary Inside" style="height:250px;">
+                <div class="apt-details">
+                    <h3 style="font-size: 16px;">The Vault Cathedral</h3>
+                    <p style="margin: 0;">Preserved stained windows illustrating ancient celestial constellations mapped by 15th-century mountain monks.</p>
+                </div>
+            </div>
+            <div class="apt-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfhmcsFgFju34IMbivxaVxs9UbuMfRgP1-E7JTF8gAg2pwqEHpViEtwpf_ciX" alt="The Armor Room" style="height:250px;">
+                <div class="apt-details">
+                    <h3 style="font-size: 16px;">The Royal Armory</h3>
+                    <p style="margin: 0;">Housing over 400 original handcrafted steel suits used by the elite High Alpine Vanguard during historical border sieges.</p>
+                </div>
+            </div>
+            <div class="apt-card">
+                <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80" alt="Ancient Woods" style="height:250px;">
+                <div class="apt-details">
+                    <h3 style="font-size: 16px;">Whispering Pines</h3>
+                    <p style="margin: 0;">The primordial woodland surrounding the castle walls, protected by ancient environmental decrees since 1640.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container" style="display: flex; flex-direction: column; gap: 15px; align-items: center; justify-content: center;">
+            <div style="font-size: 20px; font-weight: 700; letter-spacing: 1px; font-family:'Cinzel', serif;"><i class="fa-solid fa-mountain-sun" style="color: var(--accent);"></i> VISMONT</div>
+            <p style="margin: 0; color: var(--light); opacity: 0.8;">&copy; 2026 Vismont Archive Division. Secure Gateway Protocol. Built for historical preservation.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

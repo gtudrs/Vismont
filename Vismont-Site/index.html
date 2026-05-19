@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vismont Official Portal - Discover the Mountain</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-mountain-sun"></i> VISMONT
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="active-link">Home</a></li>
+                <li><a href="istorie.html">History</a></li>
+                <li><a href="atractii.html">Attractions</a></li>
+                <li><a href="bilete.html">Tickets</a></li>
+                <li><a href="booking.html">Accommodation</a></li>
+            </ul>
+            <div class="nav-extra">
+                <a href="login.html" class="profile-icon" title="My Account">
+                    <i class="fa-solid fa-circle-user"></i>
+                </a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="booking-hero" style="background: linear-gradient(rgba(44, 57, 48, 0.65), rgba(44, 57, 48, 0.8)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80') center/cover;">
+        <div class="hero-overlay" style="max-width: 800px; margin: 0 auto;">
+            <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; display: block; margin-bottom: 10px;">Welcome to the heart of the mountains</span>
+            <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 20px; line-height: 1.2;">Discover the Vismont District</h1>
+            <p style="font-size: 18px; max-width: 600px; margin: 0 auto 35px auto;">An alpine oasis where raw nature meets cozy sanctuary. Plan your perfect escape, explore historical trails, and book our premium accommodations.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="booking.html" class="search-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; height: auto; padding: 14px 30px;">Book Stay</a>
+                <a href="atractii.html" class="search-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; height: auto; padding: 14px 30px; background-color: transparent; border: 2px solid var(--white); color: var(--white);">Explore Places</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container section">
+        <div style="text-align: center; margin-bottom: 5px;">
+            <span style="color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 13px; letter-spacing: 1px;">Why Vismont?</span>
+        </div>
+        <h2 class="section-title" style="text-align: center; border: none; padding: 0; margin-bottom: 50px;">Unique Experiences at High Altitudes</h2>
+        
+        <div class="apartment-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div style="background: var(--white); padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-top: 4px solid var(--bg-dark); text-align: center;">
+                <div style="width: 60px; height: 60px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--accent); font-size: 24px;">
+                    <i class="fa-solid fa-hotel"></i>
+                </div>
+                <h3 style="color: var(--bg-dark); margin-bottom: 12px; font-size: 20px;">Premium Stays</h3>
+                <p style="color: #64748b; font-size: 14px;">From asymmetrical apartments with suspended panoramic terraces to rustic cabins isolated deep within the forest.</p>
+            </div>
+
+            <div style="background: var(--white); padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-top: 4px solid var(--accent); text-align: center;">
+                <div style="width: 60px; height: 60px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--bg-dark); font-size: 24px;">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+                <h3 style="color: var(--bg-dark); margin-bottom: 12px; font-size: 20px;">Trails & Attractions</h3>
+                <p style="color: #64748b; font-size: 14px;">Discover breathtaking lookout points, hidden waterfalls, and pathways rich with local heritage and history.</p>
+            </div>
+
+            <div style="background: var(--white); padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-top: 4px solid var(--bg-dark); text-align: center;">
+                <div style="width: 60px; height: 60px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--accent); font-size: 24px;">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+                <h3 style="color: var(--bg-dark); margin-bottom: 12px; font-size: 20px;">Digital Tickets</h3>
+                <p style="color: #64748b; font-size: 14px;">Integrated seamless ticketing system. Instantly reserve your access to events, national parks, or cable cars.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #f1f5f9; padding: 80px 0;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 class="section-title" style="margin-bottom: 0;">Top Recommended Places</h2>
+                </div>
+                <a href="booking.html" style="color: var(--accent); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-size: 15px;">
+                    View all stays <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="apartment-grid">
+                <a href="booking.html" class="apt-card">
+                    <span class="apt-badge">Popular</span>
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=600&q=80" alt="Aluta Penthouse">
+                    <div class="apt-details">
+                        <h3>Aluta Penthouse</h3>
+                        <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Central District, Vismont</p>
+                        <div class="apt-price">350 RON <span>/ night</span></div>
+                    </div>
+                </a>
+
+                <a href="booking.html" class="apt-card">
+                    <span class="apt-badge" style="background: var(--bg-dark)">New</span>
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Panorama Terrace">
+                    <div class="apt-details">
+                        <h3>Panorama Terrace</h3>
+                        <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> High Alpine Zone</p>
+                        <div class="apt-price">480 RON <span>/ night</span></div>
+                    </div>
+                </a>
+
+                <a href="booking.html" class="apt-card">
+                    <span class="apt-badge">Secluded</span>
+                    <img src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=600&q=80" alt="Forest Nest Cabin">
+                    <div class="apt-details">
+                        <h3>Forest Nest Cabin</h3>
+                        <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Azure Pine Valley</p>
+                        <div class="apt-price">290 RON <span>/ night</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container" style="display: flex; flex-direction: column; gap: 15px; align-items: center; justify-content: center;">
+            <div style="font-size: 20px; font-weight: 700; letter-spacing: 1px;"><i class="fa-solid fa-mountain-sun" style="color: var(--accent);"></i> VISMONT</div>
+            <p style="margin: 0; color: var(--light); opacity: 0.8;">&copy; 2026 Vismont Official Portal. All rights reserved for school project purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

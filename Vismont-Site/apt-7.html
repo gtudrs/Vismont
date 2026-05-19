@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Knoll Duplex - Vismont Family Friendly</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .product-header {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 247, 248, 0.9));
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 6px solid #d4af37;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .product-header h1 {
+            color: #2d3436 !important;
+            font-size: 32px;
+            margin: 0 0 8px 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        .product-header p {
+            color: #636e72 !important;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+        .product-header p i { color: #d4af37; }
+
+        @media (min-width: 992px) {
+            .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+            .product-gallery { display: table; width: 100%; height: 450px; margin-bottom: 35px; }
+            .main-img { float: left; width: 65%; height: 450px; padding-right: 12px; }
+            .main-img img { height: 450px; width: 100%; object-fit: cover; border-radius: 8px; }
+            .side-imgs { float: left; width: 35%; height: 450px; }
+            .side-imgs img { width: 100%; height: 219px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block; }
+            .side-imgs img:last-child { margin-bottom: 0; }
+            .product-content { display: table; width: 100%; margin-top: 30px; }
+            .product-info { display: table-cell; width: 65%; padding-right: 45px; vertical-align: top; }
+            .booking-sidebar { display: table-cell; width: 35%; vertical-align: top; background: #FFFFFF; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; position: sticky; top: 90px; }
+        }
+        @media (max-width: 991px) {
+            .product-gallery { display: flex; flex-direction: column; gap: 10px; }
+            .side-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+            .product-gallery img { height: 250px; object-fit: cover; border-radius: 8px; width: 100%; }
+            .booking-sidebar { margin-top: 35px; background: #fff; padding: 20px; border-radius: 12px; }
+        }
+        .specs { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 25px; }
+        .specs span { font-weight: 600; color: #2d3436; display: flex; align-items: center; gap: 8px; }
+        .specs i { color: #d4af37; }
+        .amenities-list ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .amenities-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #636e72; }
+        .amenities-list i { color: #d4af37; }
+    </style>
+</head>
+<body class="theme-booking">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-mountain-sun"></i> VISMONT</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="atractii.html">Attractions</a></li>
+                <li><a href="booking.html" class="active-link">Accommodation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container section">
+        <div class="product-header">
+            <h1>Harmony Knoll Duplex</h1>
+            <p><i class="fa-solid fa-location-dot"></i> Harmony Knoll District, Vismont</p>
+        </div>
+
+        <div class="product-gallery">
+            <div class="main-img">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Duplex Living">
+            </div>
+            <div class="side-imgs">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=500&q=80" alt="Stairs">
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=500&q=80" alt="Kitchen">
+            </div>
+        </div>
+
+        <div class="product-content">
+            <div class="product-info">
+                <div class="specs">
+                    <span><i class="fa-solid fa-expand"></i> 120 m²</span>
+                    <span><i class="fa-solid fa-bed"></i> 2 Levels</span>
+                    <span><i class="fa-solid fa-users"></i> Family Friendly</span>
+                    <span><i class="fa-solid fa-tree"></i> Private Garden</span>
+                </div>
+                <hr>
+                <h3>An ideal space for your loved ones</h3>
+                <p>Harmony Knoll Duplex offers an airy, two-level structure thoughtfully designed to ensure the comfort of the entire family. Massive interior staircases and east-facing windows perfectly complement the warm and welcoming atmosphere.</p>
+                <div class="amenities-list">
+                    <h4>Amenities included:</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Underfloor heating</li>
+                        <li><i class="fa-solid fa-check"></i> Fully equipped kitchen</li>
+                        <li><i class="fa-solid fa-check"></i> Secure play area</li>
+                        <li><i class="fa-solid fa-check"></i> Private parking included</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="booking-sidebar">
+                <div class="price-tag">400 RON <span>/ night</span></div>
+                <form onsubmit="plataPaypal(event)">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" required>
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" required>
+                    <button type="submit" class="paypal-btn"><i class="fa-brands fa-paypal"></i> Book with PayPal</button>
+                </form>
+            </aside>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
