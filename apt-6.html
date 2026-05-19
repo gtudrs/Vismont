@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace Sanctuary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* REPARARE LIZIBILITATE ANTET - BLACK & GOLD IMPERIAL */
+        .product-header {
+            background: linear-gradient(135deg, rgba(15, 16, 17, 0.98), rgba(26, 27, 29, 0.95));
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 6px solid #d4af37; /* Accent Gold */
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+        
+        .product-header h1 {
+            color: #d4af37 !important;
+            font-size: 32px;
+            margin: 0 0 8px 0;
+            font-family: 'Marcellus', serif;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .product-header p {
+            color: #e2e8f0 !important;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+
+        .product-header p i {
+            color: #d4af37;
+        }
+
+        /* OPTIMIZARE CALCULATOR (DESKTOP) */
+        @media (min-width: 992px) {
+            .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+            .product-gallery {
+                display: block;
+                content: "";
+                clear: both;
+                display: table;
+                width: 100%;
+                height: 450px;
+                margin-bottom: 35px;
+            }
+
+            .main-img {
+                float: left;
+                width: 65%;
+                height: 450px;
+                padding-right: 12px;
+            }
+
+            .main-img img {
+                height: 450px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .side-imgs {
+                float: left;
+                width: 35%;
+                height: 450px;
+            }
+
+            .side-imgs img {
+                width: 100%;
+                height: 219px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 12px;
+                display: block;
+            }
+
+            .side-imgs img:last-child { margin-bottom: 0; }
+
+            .product-content {
+                display: table;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .product-info {
+                display: table-cell;
+                width: 65%;
+                padding-right: 45px;
+                vertical-align: top;
+            }
+
+            .booking-sidebar {
+                display: table-cell;
+                width: 35%;
+                vertical-align: top;
+                background: #FFFFFF;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                border: 1px solid #e2e8f0;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 90px;
+            }
+        }
+
+        /* OPTIMIZARE MOBIL */
+        @media (max-width: 991px) {
+            .product-gallery { display: flex; flex-direction: column; gap: 10px; }
+            .side-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+            .product-gallery img { height: 250px; object-fit: cover; border-radius: 8px; width: 100%; }
+            .booking-sidebar { margin-top: 35px; background: #fff; padding: 20px; border-radius: 12px; }
+        }
+
+        .specs { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 25px; }
+        .specs span { font-weight: 600; color: #1e293b; display: flex; align-items: center; gap: 8px; }
+        .specs i { color: #d4af37; }
+        .amenities-list ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .amenities-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #334155; }
+        .amenities-list i { color: #d4af37; }
+    </style>
+</head>
+<body class="theme-booking">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-mountain-sun"></i> VISMONT</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="atractii.html">Attractions</a></li>
+                <li><a href="booking.html" class="active-link">Accommodation</a></li>
+            </ul>
+            <div class="nav-extra">
+                <a href="login.html" class="profile-icon"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section">
+        
+        <div class="product-header">
+            <h1>Peace Sanctuary</h1>
+            <p><i class="fa-solid fa-crown"></i> Peace Sanctuary, Top Floor, Vismont</p>
+        </div>
+
+        <div class="product-gallery">
+            <div class="main-img">
+                <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Aluta Penthouse Master Living">
+            </div>
+            <div class="side-imgs">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=500&q=80" alt="Penthouse Private Infinity Pool">
+                <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=600&q=80" alt="Penthouse Luxury Bathroom">
+            </div>
+        </div>
+
+        <div class="product-content">
+            
+            <div class="product-info">
+                <div class="specs">
+                    <span><i class="fa-solid fa-expand"></i> 450 m²</span>
+                    <span><i class="fa-solid fa-bed"></i> 3 Master Suites</span>
+                    <span><i class="fa-solid fa-helicopter"></i> Private Helipad</span>
+                    <span><i class="fa-solid fa-vault"></i> Grade Q Security</span>
+                </div>
+                
+                <hr>
+
+                <h3>Your Sanctuary of Serenity Above the World</h3>
+                <p>
+                    Aluta Penthouse, widely recognized as the "Peace Sanctuary," represents the ultimate pinnacle of architectural refinement throughout the entire Vismont complex. Perched on the top floor, this space was masterfully designed as an absolute escape from the hustle and bustle of everyday life, where the quiet stillness of the mountains becomes an integral part of the interior decor.
+                </p>
+                
+                <p>
+                    The crown jewel is the monumental living room featuring massive glass curtain walls that flood the entire area with warm natural light and offer sweeping, spectacular panoramic views. The relaxation space transitions fluidly out to a private indoor infinity pool, where the water appears to merge directly with the horizon line and distant mountain peaks.
+                </p>
+                
+                <p>
+                    The choice of premium finishes brings together the raw textures of natural stone with white marble highlights and clean minimalist details, creating a pure, warm, and deeply relaxing aesthetic. This is far more than just a residence; it is a dedicated personal sanctuary for total well-being and absolute privacy.
+                </p>
+                
+                <div class="amenities-list">
+                    <h4>Sovereign Services Included:</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> 24/7 dedicated butler</li>
+                        <li><i class="fa-solid fa-circle-check"></i> VIP Airport Transfer</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Private Michelin-starred chef</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Fully stocked wine cellar</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Biometric secure access (Helipad)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Integrated quantum audio system</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="booking-sidebar">
+                <div class="price-tag">950 RON <span>/ night</span></div>
+                
+                <form onsubmit="plataPaypal(event)">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" required>
+
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" required>
+
+                    <label for="guests">Guests</label>
+                    <input type="number" id="guests" value="2" min="1" max="6">
+
+                    <button type="submit" class="paypal-btn">
+                        <i class="fa-brands fa-paypal"></i> Secure Book with PayPal
+                    </button>
+                </form>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Vismont Town Hall. Sovereign Living.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olt Side Villa - Vismont Riverside Luxury</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* REPARARE LIZIBILITATE ANTET - RIVERSIDE THEME */
+        .product-header {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.9));
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 6px solid #A27B5C; /* Accent Copper */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        
+        .product-header h1 {
+            color: #1e293b !important;
+            font-size: 32px;
+            margin: 0 0 8px 0;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .product-header p {
+            color: #475569 !important;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+        }
+
+        .product-header p i {
+            color: #3b82f6; /* Blue for water */
+        }
+
+        /* OPTIMIZARE CALCULATOR (DESKTOP) */
+        @media (min-width: 992px) {
+            .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+            .product-gallery {
+                display: block;
+                content: "";
+                clear: both;
+                display: table;
+                width: 100%;
+                height: 450px;
+                margin-bottom: 35px;
+            }
+
+            .main-img {
+                float: left;
+                width: 65%;
+                height: 450px;
+                padding-right: 12px;
+            }
+
+            .main-img img {
+                height: 450px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
+            .side-imgs {
+                float: left;
+                width: 35%;
+                height: 450px;
+            }
+
+            .side-imgs img {
+                width: 100%;
+                height: 219px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 12px;
+                display: block;
+            }
+
+            .side-imgs img:last-child { margin-bottom: 0; }
+
+            .product-content {
+                display: table;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .product-info {
+                display: table-cell;
+                width: 65%;
+                padding-right: 45px;
+                vertical-align: top;
+            }
+
+            .booking-sidebar {
+                display: table-cell;
+                width: 35%;
+                vertical-align: top;
+                background: #FFFFFF;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                border: 1px solid #e2e8f0;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 90px;
+            }
+        }
+
+        /* OPTIMIZARE MOBIL */
+        @media (max-width: 991px) {
+            .product-gallery { display: flex; flex-direction: column; gap: 10px; }
+            .side-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+            .product-gallery img { height: 250px; object-fit: cover; border-radius: 8px; width: 100%; }
+            .booking-sidebar { margin-top: 35px; background: #fff; padding: 20px; border-radius: 12px; }
+        }
+
+        .specs { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 25px; }
+        .specs span { font-weight: 600; color: #475569; display: flex; align-items: center; gap: 8px; }
+        .specs i { color: #A27B5C; }
+        .amenities-list ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .amenities-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: #334155; }
+        .amenities-list i { color: #3b82f6; }
+    </style>
+</head>
+<body class="theme-booking">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-mountain-sun"></i> VISMONT</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="atractii.html">Attractions</a></li>
+                <li><a href="booking.html" class="active-link">Accommodation</a></li>
+            </ul>
+            <div class="nav-extra">
+                <a href="login.html" class="profile-icon"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section">
+        
+        <div class="product-header">
+            <h1>Olt Side Villa</h1>
+            <p><i class="fa-solid fa-location-dot"></i> Falezei Street, Riverside District, Vismont</p>
+        </div>
+
+        <div class="product-gallery">
+            <div class="main-img">
+                <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Olt Side Villa Exterior Dusk">
+            </div>
+            <div class="side-imgs">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="Villa Private Pier">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=500&q=80" alt="Villa Modern Interior">
+            </div>
+        </div>
+
+        <div class="product-content">
+            
+            <div class="product-info">
+                <div class="specs">
+                    <span><i class="fa-solid fa-expand"></i> 200 m²</span>
+                    <span><i class="fa-solid fa-bed"></i> 2 Bedrooms</span>
+                    <span><i class="fa-solid fa-anchor"></i> Private Pier</span>
+                    <span><i class="fa-solid fa-ship"></i> Boat Included</span>
+                </div>
+                
+                <hr>
+
+                <h3>Fluid Tranquility</h3>
+                <p>Olt Side Villa offers a luxurious sanctuary right on the banks of the legendary Olt River. The villa's organic architecture emphasizes transparency, utilizing expansive windows to capture stunning water reflections in every single room.</p>
+                <p>The crown jewel of the residence is its private cedarwood pier—the ideal spot for morning breakfast or for embarking on a short cruise with the complimentary private electric boat provided throughout your stay.</p>
+                
+                <div class="amenities-list">
+                    <h4>Riverside Services:</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i> Private electric boat</li>
+                        <li><i class="fa-solid fa-check"></i> Waterfront terrace</li>
+                        <li><i class="fa-solid fa-check"></i> EV & Boat charging station</li>
+                        <li><i class="fa-solid fa-check"></i> Quantum-Fiber WiFi</li>
+                        <li><i class="fa-solid fa-check"></i> Nautical concierge</li>
+                        <li><i class="fa-solid fa-check"></i> Mountain water filtration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="booking-sidebar">
+                <div class="price-tag">750 RON <span>/ night</span></div>
+                
+                <form onsubmit="plataPaypal(event)">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" required>
+
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" required>
+
+                    <label for="guests">Guests</label>
+                    <input type="number" id="guests" value="2" min="1" max="5">
+
+                    <button type="submit" class="paypal-btn">
+                        <i class="fa-brands fa-paypal"></i> Book with PayPal
+                    </button>
+                </form>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Vismont Town Hall. Riverside Serenity.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

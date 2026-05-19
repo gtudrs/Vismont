@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Sky-Suite - Vismont Luxury</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* REPARARE LIZIBILITATE ANTET */
+        .product-header {
+            background: linear-gradient(135deg, rgba(44, 57, 48, 0.95), rgba(63, 79, 68, 0.85));
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 6px solid #A27B5C;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .product-header h1 { color: #DCD7C9 !important; font-size: 32px; margin: 0 0 8px 0; }
+        .product-header p { color: #FFFFFF !important; font-size: 15px; display: flex; align-items: center; gap: 8px; margin: 0; }
+
+        /* OPTIMIZARE CALCULATOR */
+        @media (min-width: 992px) {
+            .product-gallery { display: table; width: 100%; height: 450px; margin-bottom: 35px; }
+            .main-img { float: left; width: 65%; height: 450px; padding-right: 12px; }
+            .main-img img { width: 100%; height: 450px; object-fit: cover; border-radius: 8px; }
+            .side-imgs { float: left; width: 35%; height: 450px; }
+            .side-imgs img { width: 100%; height: 219px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block; }
+            .product-content { display: table; width: 100%; margin-top: 30px; }
+            .product-info { display: table-cell; width: 65%; padding-right: 45px; vertical-align: top; }
+            .booking-sidebar { display: table-cell; width: 35%; vertical-align: top; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); position: sticky; top: 90px; border: 1px solid #e2e8f0; }
+        }
+
+        @media (max-width: 991px) {
+            .product-gallery { display: flex; flex-direction: column; gap: 10px; }
+            .side-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+            .side-imgs img, .main-img img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; }
+        }
+    </style>
+</head>
+<body class="theme-booking">
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-mountain-sun"></i> VISMONT</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="atractii.html">Attractions</a></li>
+                <li><a href="booking.html" class="active-link">Accommodation</a></li>
+            </ul>
+            <div class="nav-extra">
+                <a href="login.html" class="profile-icon"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container section">
+        
+        <div class="product-header">
+            <h1>Zenith Sky-Suite</h1>
+            <p><i class="fa-solid fa-location-dot"></i> 120th Floor, Celestial Towers, Zenith Heights, Vismont</p>
+        </div>
+
+        <div class="product-gallery">
+            <div class="main-img">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="Zenith Sky Suite Living Room">
+            </div>
+            <div class="side-imgs">
+                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=500&q=80" alt="Zenith Sky Suite Bedroom">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Zenith Sky Suite Bathroom">
+            </div>
+        </div>
+
+        <div class="product-content">
+            
+            <div class="product-info">
+                <div class="specs">
+                    <span><i class="fa-solid fa-bed"></i> 2 Bedrooms</span>
+                    <span><i class="fa-solid fa-bath"></i> 2 Bathrooms</span>
+                    <span><i class="fa-solid fa-fingerprint"></i> Biometric Elevator</span>
+                    <span><i class="fa-solid fa-cloud-bolt"></i> Floor 120</span>
+                </div>
+                
+                <hr>
+
+                <h3>An experience at 500m above ground</h3>
+                <p>Zenith Sky-Suite redefines modern luxury within Celestial Towers. This suite offers an unparalleled panoramic view over the entire metropolis, equipped with advanced Smart Glass technology that automatically adapts to sunlight to ensure the ideal indoor temperature and ambiance at all times.</p>
+                <p>The interior is defined by futuristic materials such as ultra-lightweight carbon fiber and white Carrara marble, with everything seamlessly managed through a centralized AI interface.</p>
+                
+                <div class="amenities-list">
+                    <h4>Services included:</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-circle-check"></i> Access to the Executive Lounge</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 8K Laser Private Cinema</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Valet service for EV vehicles</li>
+                        <li><i class="fa-solid fa-circle-check"></i> VIP Minibar Restocked Daily</li>
+                        <li><i class="fa-solid fa-circle-check"></i> 24/7 AI Room Service</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="booking-sidebar">
+                <div class="price-tag">680 RON <span>/ night</span></div>
+                
+                <form onsubmit="plataPaypal(event)">
+                    <label for="checkin">Check-in</label>
+                    <input type="date" id="checkin" required>
+
+                    <label for="checkout">Check-out</label>
+                    <input type="date" id="checkout" required>
+
+                    <label for="guests">Guests</label>
+                    <input type="number" id="guests" value="2" min="1" max="4">
+
+                    <button type="submit" class="paypal-btn">
+                        <i class="fa-brands fa-paypal"></i> Book with PayPal
+                    </button>
+                </form>
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Vismont Town Hall. Luxury Accommodation.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
